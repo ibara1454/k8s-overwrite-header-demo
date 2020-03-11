@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  index.js: |+
+    const http = require('http');
+
+    http.createServer((req, res) => {
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      console.log(req.headers);
+      res.end(`Content-Type: ${req.headers['content-type']}`);
+    }).listen(8080, () => console.log('Server http://localhost:8080'));
+
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: backend-script
