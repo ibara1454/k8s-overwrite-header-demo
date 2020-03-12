@@ -1,27 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: backend-server
-  name: backend-server
+  name: node-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: backend-server
+      app: node
   template:
     metadata:
       labels:
-        app: backend-server
+        app: node
     spec:
       containers:
-      - name: node 
+      - name: node
         image: node:13.10.1-alpine
         command: ["node", "/workspace/index.js"]
+        env:
+          - name: PORT
+            value: "80"
         volumeMounts:
           - name: config-volume
-            mountPath: /workspace
+            mountPath: /workspace/index.js
+            subPath: index.js
       volumes:
         - name: config-volume
           configMap:
-            name: backend-script
+            name: node-script

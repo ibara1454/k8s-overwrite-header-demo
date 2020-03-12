@@ -1,9 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: nginx
-  name: proxy
+  name: proxy-deployment
 spec:
   replicas: 1
   selector:
@@ -15,7 +13,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx 
+      - name: nginx
         image: nginx:alpine
         ports:
           - containerPort: 80
