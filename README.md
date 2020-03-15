@@ -1,5 +1,8 @@
 # k8s-overwrite-header-demo
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues open](https://img.shields.io/github/issues/ibara1454/k8s-overwrite-header-demo.svg?maxAge=2592000)](https://github.com/ibara1454/k8s-overwrite-header-demo/issues)
+
 This is a demo to show how to overwrite / append HTTP headers to request.
 
 ## Feature
