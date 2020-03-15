@@ -64,3 +64,8 @@ After verification, you might want to delete all resources just by using `kubect
 ```bash
 kubectl delete -f .
 ```
+
+## License
+
+The MIT License (MIT).
+Copyright (c) 2020, Chiajun Wang
