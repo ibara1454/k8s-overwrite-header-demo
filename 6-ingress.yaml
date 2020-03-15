@@ -1,0 +1,9 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  # Default route
+  backend:
+    serviceName: proxy-nodeport
+    servicePort: 80
