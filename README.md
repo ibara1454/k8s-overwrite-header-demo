@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![GitHub issues open](https://img.shields.io/github/issues/ibara1454/k8s-overwrite-header-demo.svg?maxAge=2592000)](https://github.com/ibara1454/k8s-overwrite-header-demo/issues)
+[![License: MIT](https://img.shields.io/badge/kubernetes-v1.13.25-green)](https://v1-13.docs.kubernetes.io/docs/setup/release/notes/)
 
 This is a demo to show how to overwrite / append HTTP headers to request.
 
@@ -15,6 +16,9 @@ This is a demo to show how to overwrite / append HTTP headers to request.
 ### Applying resources
 
 Clone the resource config files and apply to the cluster.
+
+Notice: In this sample, we use [GKE](https://cloud.google.com/kubernetes-engine?hl=ja) for constructing kubernetes cluster.
+You should check your cluster provider supports use of *ingress*.
 
 ```bash
 # Clone this repository
