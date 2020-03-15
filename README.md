@@ -35,7 +35,7 @@ $ kubectl get ingress
 # ingress   *       130.211.***.***   80      108s
 ```
 
-Access to `/` of the external IP. This is an normal pattern.
+Access to `/` of the external IP. This is a normal pattern.
 
 ```bash
 $ curl 130.211.***.*** | jq
